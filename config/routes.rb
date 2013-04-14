@@ -1,5 +1,6 @@
 MyDictionary::Application.routes.draw do
   get "browse/index"
+  get "browse/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
