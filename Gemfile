@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'debugger'
 gem 'haml-rails'
+gem "mechanize", "~> 2.6.0"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
