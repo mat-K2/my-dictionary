@@ -6,4 +6,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          = link_to "MyDictionary", root_path, :class => "brand"
+    .container-fluid
+      = yield

@@ -1,14 +1,12 @@
-%h1 MyDictionary
-
-= form_tag browse_index_path, :method => "get" do 
-  = text_field_tag "url"
-  = submit_tag
-
-%iframe{:height => 1000, :width => "70%", :src => @iframe_url}
-
-%p
-  = form_tag browse_index_path, :method => "get" do
-    = text_field_tag "word"
-    = submit_tag
-
-  = raw(@search_result)
+.row-fluid
+  .span3.well
+    %p
+      = form_tag browse_index_path, :method => "get" do
+        = text_field_tag "word", params[:word]
+        = submit_tag "辞書検索"
+      = raw(@search_result)
+  .span9
+    = form_tag browse_index_path, :method => "get" do
+      = text_field_tag "url", params[:url], :class => "url_field"
+      = submit_tag "アクセス"
+    %iframe{:height => 1000, :width => "100%", :src => @iframe_url}
