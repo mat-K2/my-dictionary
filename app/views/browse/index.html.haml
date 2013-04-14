@@ -1,10 +1,10 @@
 .row-fluid
   .span3.well
     %p
-      = form_tag browse_index_path, :method => "get" do
+      = form_tag browse_index_path, :method => "get", :remote => true do
         = text_field_tag "word", params[:word]
         = submit_tag "辞書検索"
-      = raw(@search_result)
+      #search-result
   .span9
     = form_tag browse_index_path, :method => "get" do
       = text_field_tag "url", params[:url], :class => "url_field"
