@@ -22,6 +22,7 @@ gem 'haml-rails'
 gem "mechanize", "~> 2.6.0"
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'faraday'
 
 group :production do
   gem 'pg'
