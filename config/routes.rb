@@ -1,8 +1,10 @@
 MyDictionary::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "users/sessions" }
 
   get "browse/index"
   get "browse/home"
+
+  get "auth/:provider/callback" => "oauth/sessions#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

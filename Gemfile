@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem "mechanize", "~> 2.6.0"
 gem 'devise'
+gem 'omniauth-twitter'
 
 group :production do
   gem 'pg'
