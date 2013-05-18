@@ -4,10 +4,10 @@ class AuthController < ApplicationController
   def ripple
     reset_session
 
-    rsp = Faraday.new(:url => 'http://localhost:3000').post '/api/oauth' do |req|
+    rsp = Faraday.new(:url => 'http://ripple-web.herokuapp.com').post '/api/oauth' do |req|
       req.body = {
-        :consumer_key => "EKXgpGZUnhFiILPsM53Wl",
-        :consumer_secret => "kOMP2VDa5wnz1v0pRL8TXhuAjsegHbym9qQJdB4UF"
+        :consumer_key => "lE1VJxvaRGB8dTMseQNF",
+        :consumer_secret => "fZ5O7dv6WJ3KFQH0rnxcCbEBhLRU81yGjpikuz29"
       }
     end
     auth = JSON.parse(rsp.body)
