@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 class AuthController < ApplicationController
   skip_before_filter :simple_authenticate_user
-  def ripple
+  def rippler
     reset_session
 
-    rsp = Faraday.new(:url => 'http://ripple-web.herokuapp.com').post '/api/oauth' do |req|
+    rsp = Faraday.new(:url => 'http://rippler.herokuapp.com').post '/api/oauth' do |req|
       req.body = {
         :consumer_key => "lE1VJxvaRGB8dTMseQNF",
         :consumer_secret => "fZ5O7dv6WJ3KFQH0rnxcCbEBhLRU81yGjpikuz29"

@@ -5,7 +5,7 @@ MyDictionary::Application.routes.draw do
   get "browse/home"
 
   get "auth/:provider/callback" => "oauth/sessions#create"
-  get "auth/ripple"
+  get "auth/rippler"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
